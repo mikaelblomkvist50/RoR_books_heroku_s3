@@ -83,3 +83,5 @@ $ <b>heroku run rails db:seed</b>
 
 $ <b>heroku open</b>
 </pre></code>
+
+https://stackoverflow.com/questions/23236559/heroku-push-rejected-failed-to-compile-ruby-app

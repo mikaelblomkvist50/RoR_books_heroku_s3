@@ -4,7 +4,7 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+    @books = Book.paginate(:page => params[:page], :per_page => 3).order(:title)
   end
 
   # GET /books/1
@@ -69,6 +69,6 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:title, :description)
+       params.require(:book).permit(:title, :description, :book_cover)
     end
 end

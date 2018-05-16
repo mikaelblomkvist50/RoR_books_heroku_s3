@@ -2,28 +2,17 @@
 
 <h1>Books</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @books.each do |book| %>
-      <tr>
-        <td><%= book.title %></td>
-        <td><%= book.description %></td>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @books.each do |book| %>
+  <h3><%= link_to book.title, book %></h3>
+  <%# This way we get a link with the products name that points to the product %>
+  <%# Because remember the ROUTE MAP for prefix 'book' is 'book GET /books/:id(.:format) books#show' %>
+  <p><%= book.description %></p>
+  <%= link_to(image_tag(book.book_cover.small_thumb), book.book_cover.url, target: '_blank') %>
+  <td><%= link_to 'Edit', edit_book_path(book) %></td>
+  <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
 
 <br>
 
-<%= link_to 'New Book', new_book_path %>
+<%= link_to 'New Book', new_book_path, class: 'btn btn-primary float-right' %>
+<%= will_paginate @books, next_label: '&raquo;', list_classes: %w(pagination justify-content-start) %>

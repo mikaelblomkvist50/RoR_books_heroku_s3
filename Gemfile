@@ -33,6 +33,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'bootstrap', '~> 4.0'
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'will_paginate-bootstrap4', '~> 0.2.2'
+gem 'carrierwave', '~> 1.2', '>= 1.2.2'
+gem 'mini_magick', '~> 4.8'
+gem 'simple_form', '~> 3.5', '>= 3.5.1'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
@@ -55,6 +60,7 @@ end
 
 group :production do
   gem 'pg', '0.21.0'
+  gem 'fog', '~> 1.42'
 end
 
 

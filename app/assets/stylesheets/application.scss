@@ -1,2 +1,5 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+@import 'bootstrap_override/will_pagination';
+@import 'bootstrap_override/button';
+@import 'bootstrap_override/anchor';

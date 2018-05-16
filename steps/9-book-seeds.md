@@ -21,3 +21,7 @@ Book.create(title: 'How Money Got Free: Bitcoin and the Fight for the Future of 
 
 Book.create(title: 'Text Processing with Ruby: Extract Value from the Data That Surrounds You', description: "Text is everywhere. Web pages, databases, the contents of files--for almost any programming task you perform, you need to process text. Cut even the most complex text-based tasks down to size and learn how to master regular expressions, scrape information from Web pages, develop reusable utilities to process text in pipelines, and more.")
 ```
+
+How to seed images?
+
+Maybe this helps https://gist.github.com/averyvery/2361682
